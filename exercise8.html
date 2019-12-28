@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>CSS Colors, Units, Display</title>
+    <meta charset="utf-8">
+    <style>
+    #div-demo, #div-demo2, #div-demo3 {
+
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+    #div-demo2 {
+
+        width: 50%; /*percentage of parent element.*/
+        height: 6.5em;
+    }
+    #div-demo3 {
+
+        display: inline;
+    }
+    #span-demo, #span-demo2 {
+
+        background: green;
+        width: 100px;
+        height: 100px;
+    }
+    #span-demo2 {
+
+        display: inline-block;
+    }
+    h3 {color: yellow;}
+    .desc {color: blue;}
+    p {color: magenta;}
+    h3 {color: darkcyan;}
+    </style>
+</head>
+<body>
+    <h2>Display, Colors, and Units of measurement with CSS</h2>
+    <h3>Generic Elements</h3>
+    <p>Generic elements serve to identify a part of your web page without having a specific formatting function. They give you a place to assign a style.</p>
+    <h3>Block Element - &lt;div&gt;</h3>
+    <p class="desc">A <strong>division</strong> is a generic block-display element. Example: a paragraph of text.</p>
+    <div id="div-demo">This is a div</div>
+    <h3>In-line Element - &lt;span&gt;</h3>
+    <p class="desc">A <strong>span</strong> is a generic inline-display element. Example: a word in a sentence.</p>
+    <p>This is a paragraph with a <span id="span-demo">span</span> inside it.</p>
+    <h3>Relative Units</h3>
+    <p>em and percentage unit scale depends on font-size settings and scale of parent elements.</p>
+    <div id="div-demo2">This is another div</div>
+    <h4>Force Element Display</h4>
+    <div id="div-demo3">You can force the display of an element to get <span id="span-demo2">different</span> results.</div>
+    <p>or you can <span style="display: none;">hide</span> things.</p>
+</body>
+</html>

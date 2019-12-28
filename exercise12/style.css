@@ -1,0 +1,121 @@
+body {
+
+    background: grey;
+    font-family: Futura, Calibri, sans-serif;
+    margin: 0; padding: 0;
+}
+#home {
+
+    background: url("https://www.nighthelper.com/wp-content/uploads/2016/03/nature_waterfall_summer_lake_trees_90400_3840x2160.jpg"); background-size: cover;
+}
+#away {
+
+    background: url("http://wallpapertvs.com/wp-content/uploads/2014/09/Nature-Abstract-Wallpapers.jpg"); background-size: cover;
+}
+#some-else {
+
+    background: url("https://img.etsystatic.com/il/3a04fa/1034723693/il_fullxfull.1034723693_5ivx.jpg"); background-size: cover;
+}
+#some-new {
+
+    background: url("https://www.dhresource.com/0x0s/f2-albu-g5-M01-4F-37-rBVaJFnMuNGANXyZAAKLB9Qzgg4068.jpg/abstract-painting-romantic-oil-painting-print.jpg"); background-size: cover;
+}
+header {
+
+    background: skyblue;
+    height: 80px;
+    position: relative;
+}
+#away header {background: gold;}
+#some-else header {background: navy;}
+#some-new header {background: maroon;}
+h1 {
+
+    line-height: 80px;
+    margin: 0px 0px 0px 40px;
+}
+h1:hover {color: white;}
+/*NAVIGATION BASIC*/
+#menu {
+
+    display: none;
+    line-height: 80px;
+    position: absolute;
+    top: -80px;
+    right: 0px;
+    width: 125px;
+    text-align: center;
+}
+nav {
+
+    position: absolute;
+    top: 0px;
+    right: 40px;
+}
+nav ul {
+
+    list-style-type: none;
+    text-align: center;
+    padding: 0px; margin: 0;
+}
+nav li {
+
+    width: 125px;
+    float: right;
+}
+nav a {
+
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    letter-spacing: 0.1em;
+    display: block;
+}
+nav a:hover {
+
+    background: rgba(100%, 100%, 100%, 0.5);
+    color: purple;
+}
+nav a:active {
+
+    background: rgba(20%, 20%, 20%, 0.5);
+    color: white;
+}
+#home #homelink a, #away #awaylink a, #some-else #some-elselink a, #some-new #some-newlink a
+{
+
+    background: rgba(0%, 0%, 0%, 0.5);
+    color: white;
+    text-shadow: 1px 1px black;
+}
+/*SUB MENUS*/
+nav li ul {
+
+    position: absolute;
+    display: none;
+}
+nav li:hover ul {display: block;}
+nav li ul li {
+
+    border-top: 1px solid white;
+    font-size: 80%;
+    float: none;
+}
+nav li ul a {line-height: 40px;}
+/*Triggers when viewport reaches smaller size*/
+@media screen and (max-width:850px) {
+
+    #menu {display: block;}
+    #menu-hide ul {display: none;}
+    #menu-hide:hover ul {display: block;}
+    nav {top: 80px; right: 0px;}
+    nav li {width: 100vw; float: none;}
+    nav a {line-height: 40px;}
+    h1 {font-size: 5vw;}
+    nav li ul li {
+
+        float: left;
+        width: 50vw;
+        border-top: 1px dashed white;
+    }
+}

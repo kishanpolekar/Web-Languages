@@ -1,0 +1,99 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Javascript Audio</title>
+<script type="text/javascript" src="ex21script.js"></script>
+<style>
+body { background: violet; }
+img, .funbox div, .funbox, .funbox2 { border: 0px dotted red; }
+.funbox, .funbox2 { width: 200px; height: 275px; position: relative; }
+#container { margin: 0 auto; width: 200px; position: relative;}
+.g-surprise { display: none; }
+.b-surprise { display: none; }
+.bloom { width: 200px; height: 200px; background: url("http://grin3design.com/testimages/1610/bloom.gif"); position: absolute; top: 0; left: 0; }
+.gloom { width: 157px; height: 229px; background: url("http://grin3design.com/testimages/1610/gloom.gif"); position: absolute; top: 0; left: 21px;}
+.bloom2 { width: 100px; height: 120px; background: url("http://grin3design.com/testimages/1610/bloom2.gif"); position: absolute; top: 0; left: 50px; }
+.gloom2 { width: 131px; height: 162px; background: url("http://grin3design.com/testimages/1610/gloom2.gif"); position: absolute; top: 0; left: 35px }
+.guess { width: 32px; height: 32px; background: url("http://grin3design.com/testimages/1610/qcube.gif"); position: absolute; top: 230px;  font-size: 24px; font-weight: bold; text-align: center;}
+.guess:hover {-webkit-filter: hue-rotate(200deg);filter: hue-rotate(200deg);}
+#question { left: 0px; }
+#question2 { right: 0px; }
+.howsit { width: 200px; position: absolute; top: 235px; left: 0px; font-size: 18px; font-weight: bold; text-align: center;}
+#music { position: relative; left: -40px; }
+</style>
+</head>
+<body>
+
+<audio id="gloomaudio" src="http://grin3design.com/testimages/other/explode-short.mp3" preload="auto"></audio>
+<audio id="bloomaudio" src="http://grin3design.com/testimages/other/magic-short.mp3" preload="auto"></audio>
+
+<div id="container">
+	<div class="funbox">
+		<div class="b-surprise bloom"></div>
+		<div class="g-surprise gloom"></div>
+	</div>
+
+	<div class="howsit">How's it going?</div>
+
+	<div class="guess" id="question" onmouseover="showBloom(); play_bloom_sound(); setTimeout(hideBloom, 800)" ontouchstart="play_bloom_sound()">+</div>
+	<div class="guess" id="question2" onmouseover="showGloom(); play_gloom_sound(); setTimeout(hideGloom, 800)" ontouchstart="play_gloom_sound()">-</div>
+
+	<div class="funbox2">
+		<div class="b-surprise bloom2"></div>
+		<div class="g-surprise gloom2"></div>
+	</div>
+<!-- MUSIC -->
+<audio id="music" autoplay="autoplay" loop="loop" controls="controls"><source src="http://grin3design.com/testimages/other/humsong.mp3" type="audio/mp3"></source></audio>
+<!-- END OF MUSIC -->
+</div><!-- END OF CONTAINER -->
+<script>
+function showBloom() {
+
+	var x=document.getElementsByClassName("b-surprise");
+	var i;
+	for (i=0; i<x.length; i++) {
+
+		x[i].style.display="block";
+	}
+}
+function hideBloom() {
+
+	var x=document.getElementsByClassName("b-surprise");
+	var i;
+	for (i=0; i<x.length; i++) {
+
+		x[i].style.display="none";
+	}
+}
+function showGloom() {
+
+	var x=document.getElementsByClassName("g-surprise");
+	var i;
+	for (i=0; i<x.length; i++) {
+
+		x[i].style.display="block";
+	}
+}
+function hideGloom() {
+
+	var x=document.getElementsByClassName("g-surprise");
+	var i;
+	for (i=0; i<x.length; i++) {
+
+		x[i].style.display="none";
+	}
+}
+</script>
+</body>
+</html>
+<!-- SOURCES FOR IMAGES USED:
+gloom: https://s-media-cache-ak0.pinimg.com/originals/10/92/fa/1092fa7d42c7db063aaf5f1d517b1692.gif
+gloom2: http://livedoor.4.blogimg.jp/nwknews/imgs/0/b/0b186f71.gif
+qcube: http://pixeljoint.com/files/icons/cube__r1532188841.gif
+bloom2: http://www.picgifs.com/graphics/f/floaties-bubbles/graphics-floaties-bubbles-494138.gif
+bloom: http://rs125.pbsrc.com/albums/p68/alongway99/Butterfly%20Flower%20Animations/Butterfly%20Animations/ButterflyPinkBubbles.gif~c200\
+ALL SOUNDS FROM FREESOUND.ORG
+humsong: https://freesound.org/people/lavilovesyou/sounds/264191/
+gloomaudio: https://freesound.org/people/tommccann/sounds/235968/
+bloomaudio: https://freesound.org/people/Robinhood76/sounds/342432/
+-->

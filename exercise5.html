@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>HTML Images</title>
+    <meta charset="utf-8">
+</head>
+<body bgcolor="dodgerblue">
+    <h1>Images in HTML</h1>
+    <h2>Remote, Absolute URLs</h2>
+    <p>This is my school mascot:
+        <a href="https://www.ucmo.edu"><img src="https://www.prepsportswear.com/media/images/college_logos/300x300/2126342_mktg_logo.png"></a>
+        Go Mules! The image appears at its original size as an inline element. This is also a link!</p>
+        <p>If we specify a size we can resize the image: <img src="https://lh6.ggpht.com/YXtcy5SeHevSEqTMUNuyhSXVwiGWKkOX-QvoLQDFA1cxQqOaDcXD7cGSiwJYQFOLTg=w300" width="32" height="32">so that it is small enough to fit where we want it. (Normally this image is 300 pixels square)</p>
+        <p>We use an alternate attribute if ther is a problem with the image or for screenreaders used by vision-impaired visitors.<br>Here is the missing image:
+        <img src="superbad-url/not-found.jpg" alt="UCM School Mascot" width="200" height="200"></p>
+        <h2>Local, Relative URLs</h2>
+        <p>Images should be hosted in an organized folder and stored on a server with the html files and must maintain the same relative place with each other.</p>
+        <figure>
+            <img src="images/shoe.jpg" alt="a red shoe" width="300" height="300">
+            <figcaption>This is also a red mule.</figcaption>
+        </figure>
+        <h2>Image Types</h2>
+        <h3>JPEG (Joint Photographic Experts Group)</h3>
+        <p>A JPEG is best for photographic images and provides a compressed format that gives a small file size when faced with lots of color pixel variations.</p>
+        <img src="images/mule_retro.jpg">
+        <h3>GIF (Graphic Interchange Format)</h3>
+        <p>A GIF is best for limited colors. Allows for threshold transparency and animation.</p>
+        <img src="images/attitude.gif">
+        <h3>PNG (Portable Network Graphics)</h3>
+        <p>A PNG does well with limited color and photographic content. It allows for gradient and subtle transparency.</p>
+        <img src="images/mule_transp.png">
+</body>
+</html>

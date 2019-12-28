@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>CSS 3 Transformations</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<style>
+body { margin:0; padding:0; }
+#shop { background: steelblue url("http://www.grin3design.com/testimages/bluegrid25.gif"); }
+.clearall { clear: both; }
+.robot {
+	background: red url("http://www.grin3design.com/testimages/robot.png");
+	width: 125px;
+	height: 250px;
+	margin: 50px;
+	font-size: 18px;
+	text-align: center;
+	color: white;
+	float: left;
+	}
+.robot strong {
+	margin-top: 110px;
+	width: 125px;
+	display: block;
+	background: black;
+	}
+h3 {
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: white;
+	margin:0;
+	padding: 0;
+	}
+/* ADD NEW STYLES BELOW HERE */
+
+</style>
+</head>
+<body>
+<section id="shop">
+
+<div id="row0">
+	<h3>Translation, Transition</h3>
+	<div id="bot1" class="robot">
+		<strong>translate(x,y)</strong>
+	</div>
+	<div id="bot0" class="robot">
+		<strong>transition</strong>
+	</div>
+</div>
+
+<div class="clearall"></div>
+
+<div id="row1">
+	<h3>Basic Transforms</h3>
+	<div id="bot3" class="robot">
+		<strong>rotate(deg)</strong>
+	</div>
+	<div id="bot2" class="robot">
+		<strong>scale(x,y)</strong>
+	</div>
+	<div id="bot4" class="robot">
+		<strong>skew(x,y)</strong>
+	</div>
+</div>
+
+<div class="clearall"></div>
+
+<div id="row2" class="rightbottom">
+	<h3>transform-origin</h3>
+	<div id="bot6" class="robot">
+		<strong>rotate(deg)</strong>
+	</div>
+	<div id="bot5" class="robot">
+		<strong>scale(x,y)</strong>
+	</div>
+	<div id="bot7" class="robot">
+		<strong>skew(x,y)</strong>
+	</div>
+</div>
+
+<div class="clearall"></div>
+
+<div id="row3">
+	<h3>rotate 3d</h3>
+	<div id="bot8" class="robot">
+		<strong>rotateX(deg)</strong>
+	</div>
+	<div id="bot9" class="robot">
+		<strong>rotateY(deg)</strong>
+	</div>
+	<div id="bot10" class="robot">
+		<strong>rotateZ(deg)</strong>
+	</div>
+</div>
+
+<div class="clearall"></div>
+
+<div id="row4" class="rightbottom backhide">
+	<h3>rotate 3d, transform-origin, backface visibility</h3>
+	<div id="bot11" class="robot">
+		<strong>rotateX(deg)</strong>
+	</div>
+	<div id="bot12" class="robot">
+		<strong>rotateY(deg)</strong>
+	</div>
+	<div id="bot13" class="robot">
+		<strong>rotateZ(deg)</strong>
+	</div>
+</div>
+
+<div class="clearall"></div>
+
+<div id="row5" class="perspective">
+	<h3>rotate 3d, perspective, perspective-origin, preserve-3d</h3>
+	<div id="bar"></div>
+	<div id="bot14" class="robot">
+		<strong>rotateX(deg)</strong>
+	</div>
+	<div id="bot15" class="robot">
+		<strong>rotateY(deg)</strong>
+	</div>
+	<div id="bot16" class="robot">
+		<strong>rotateX(deg)</strong>
+	</div>
+</div>
+
+<div class="clearall"></div>
+</section>
+</body>
+</html>

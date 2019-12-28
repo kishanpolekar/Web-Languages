@@ -1,0 +1,79 @@
+/*NEW STYLES BELOW*/
+#bot1:hover {
+
+    -ms-transform: translate(25px, 25px); /*IE 9*/
+    -webkit-transform: translate(25px, 25px); /*Chrome, Safari, Opera*/
+    transform: translate(25px, 25px);
+}
+#bot0:hover {
+
+    opacity: 0.25;
+    transition: opacity 2s;
+}
+[id*="bot"] {
+
+    transition: transform 2s;
+}
+#bot2:hover, #bot5:hover {
+
+    -webkit-transform: scale(1.5, 1);
+    transform: scale(1.5, 1);
+}
+#bot3:hover, #bot6:hover {
+
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+#bot4:hover, #bot7:hover {
+
+    -webkit-transform: skew(20deg, 10deg);
+    transform: skew(20deg, 10deg);
+}
+.rightbottom div {
+
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+}
+#bot15 {
+
+    margin-right: 0;
+}
+#bot16 {
+
+    margin-left: 0;
+}
+#bar {
+
+    background: blue;
+    width: 115px;
+    height: 10px;
+}
+#bot8:hover, #bot11:hover, #bot14:hover, #bot16:hover {
+
+    transform: rotateX(130deg);
+}
+#bot9:hover, #bot12:hover, #bot15:hover{
+
+    transform: rotateY(130deg);
+}
+#bot10:hover, #bot13:hover {
+
+    transform: rotateZ(130deg);
+}
+.backhide div {
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.perspective {
+
+    float: left;
+    border: 1px dashed lime;
+    background: rgba(80%, 80%, 25%, 0.5);
+    -webkit-perspective: 675px;
+    perspective: 675px;
+    -webkit-perspective-origin: 115px 50%;
+    perspective-origin: 115px 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}

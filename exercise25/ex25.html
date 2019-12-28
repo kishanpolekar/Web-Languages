@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+<head>
+    <style>
+    body { font-family: sans-serif;}
+    .form-container { width: 215px; padding: 25px; background: #99a; border-radius: 15px; margin: 10vh auto; text-align: center;}
+    form { width: 210px;}
+    input { display: block; width: 200px; font-size: 100%; padding: 5px;}
+    input:placeholder-shown, textarea:placeholder-shown { font-style: italic;}
+    textarea { display: block; width: 203px; font-size: 100%; margin-bottom: 25px; padding: 5px;}
+    label, span { display: block; font-size: 50%; font-weight: normal; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 15px; color: white;}
+    input[type=radio] { display: inline; width: 15px; font-size: 80%; margin: 5px 0px 15px 0px;}
+    span { display: inline; margin: 0px 15px 0px 7px;}
+    input[type=submit], input[type=reset] { padding: 10px 15px; background: green; color: white; border: 0 none; width: 216px; cursor: pointer; border-radius: 5px; margin: 10px 0px;}
+    input[type=submit]:hover, input[type=reset]:hover { background: orange;}
+    input[type=reset] { background: red;}
+    input:focus, textarea:focus { background-color: #cff;}
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h3>Getting to know you</h3>
+        <form method="post" action="ex25-send.php">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="First and Last Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Your UCM email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" placeholder="6605438803">
+
+            <label for="mood">I'm feeling:</label>
+            <input type="radio" name="mood" value="happy" checked><span>Happy</span>
+            <input type="radio" name="mood" value="sad"><span>Sad</span>
+            <input type="radio" name="mood" value="neutral"><span>Meh</span>
+
+            <select name="favcolor">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="orange">Orange</option>
+                <option value="purple" selected>Purple</option>
+            </select><span>Favorite Color</span>
+
+            <label for="psw">Secret Word:</label>
+            <input type="password" name="psw">
+
+            <label for="comments">Comments:</label>
+            <textarea name="comments" id="comments" placeholder="Let me know what's on your mind." rows="5"></textarea>
+
+            <input class="submit-button" type="submit" name="send" value="Send Form">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Jquery Video</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+    $("#dial").click(function() {
+
+        var videos = [
+            'tuk4AJ_MZSw', //super bowl li all touchdowns
+            '6ZfuNTqbHE8', //avengers infinity war trailer
+            'Dd7FixvoKBw', //key and peele: substitute teacher
+            '79i84xYelZI', //charlie chaplin: the lion's cage
+            'vnwj9n3QaC0' //tom and jerry episode
+        ];
+        $("section iframe").detach();
+        var index=Math.floor(Math.random() * videos.length);
+        var html='<iframe width="662" height="371" src="http://www.youtube.com/embed/'+videos[index]+'?autoplay=1&loop=1&showinfo=0&controls=0&rel=0&iv_load_policy=3" frameborder="0"></iframe>';
+        $(".frameclip").append(html);
+    });
+    $("#knob").click(function() {
+
+        $(".frameclip").detach();
+        $("section").removeClass("tvon");
+        $("section").addClass("tvoff");
+    });
+    $("#knob2").click(function() {
+
+        var tvcontent='<div class="frameclip"></div>';
+        if ($('.frameclip').length==0) {
+
+            $("section").prepend(tvcontent);
+            $("section").removeClass("tvoff");
+            $("section").addClass("tvon");
+        }
+        else {}
+    });
+});
+</script>
+<style>
+body { background: #302c29; }
+section.tvoff { background: #302c29; }
+section.tvon { background: #302c29;
+    background: -webkit-radial-gradient(45% 70%, closest-corner, #5c5454, #302c29, #302c29);
+    background: -o-radial-gradient(45% 70%, closest-corner, #5c5454, #302c29, #302c29);
+    background: -moz-radial-gradient(45% 70%, closest-corner, #5c5454, #302c29, #302c29);
+    background: radial-gradient(closest-corner at 45% 70%, #5c5454, #302c29, #302c29); }
+.sectionpos { position: relative; width: 800px; height: 700px; overflow: hidden; margin: 100px auto;}
+#knob { background: url("http://grin3design.com/testimages/1610/knob.gif"); width: 35px; height: 37px; position: absolute; left: 626px; top: 239px;}
+#knob2 { background: url("http://grin3design.com/testimages/1610/knob2.gif"); width: 35px; height: 21px; position: absolute; left: 626px; top: 286px;}
+
+#dial { background: url("http://grin3design.com/testimages/1610/dial.gif"); width: 80px; height: 78px; position: absolute; left: 661px; top: 239px;}
+#tv { background: url("http://grin3design.com/testimages/1610/tv-frame.png"); width: 800px; height: 532px; position: absolute;}
+section iframe { position: absolute; top: 0px; left: -80px; }
+.frameclip { background: black url("http://grin3design.com/testimages/1610/test-pattern.jpg"); width: 500px; height: 375px; overflow: hidden; position: absolute; left: 80px; top: 48px; border: 1px dotted yellow;} /* You could also do the old-test-pattern.jpg */
+#videxample { position: relative;}
+#videxample iframe { display: block; margin: 0 auto; }
+</style>
+</head>
+<body>
+<section class="tvoff sectionpos">
+
+	<!-- FRAMECLIP WILL PREPEND HERE -->
+	<div id="tv"></div>
+	<div id="knob"></div>
+	<div id="knob2"></div>
+	<div id="dial"></div>
+
+</section>
+<!-- DEFAULT YOUTUBE EMBED BELOW -->
+<div id="videxample">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5tNzh_anCqM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><!-- END OF VID EXAMPLE -->
+<!-- Options used on the TV: autoplay=1&loop=1&showinfo=0&controls=0&rel=0&iv_load_policy=3
+Options List:
+		loop=, autoplay=, showinfo=, controls=, rel=, iv_load_policy=, playlist=, start=, end= -->
+
+</body>
+</html>

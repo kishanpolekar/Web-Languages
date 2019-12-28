@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Javascript</title>
+<style>
+body { background: blueviolet; text-align: center;}
+button { margin-top: 25px; }
+</style>
+</head>
+<body>
+
+<h1>What Can JavaScript Do?</h1>
+<button type="button">This button does nothing</button>
+
+<h2> Change HTML Content using "innerHTML"</h2>
+<p id="demo1">This is the original content</p>
+<button type="button" onclick='document.getElementById("demo1").innerHTML = "This is the new content!"'>Change Content</button>
+
+<h2>Change a specific HTML attribute using ".attribute"</h2>
+<p>In this case JavaScript changes the src (source) attribute of an image.</p>
+<img id="robot" src="http://grin3design.com/testimages/1610/robot.png" style="width:80px"><br>
+<button onmouseover="document.getElementById('robot').src = 'http://grin3design.com/testimages/1610/robot.gif'">Dance</button>
+<button onmouseover="document.getElementById('robot').src = 'http://grin3design.com/testimages/1610/robot.png'">Stop</button>
+
+<h2>Change the CSS of an element using ".style"</h2>
+<p>Here we use the background style to change colors.</p>
+<div id="colorbox" style=" margin: 0 auto; width: 100px; height: 100px; background: red;"></div>
+<button onmouseup="document.getElementById('colorbox').style.background = 'blue'">Make Blue</button>
+<button onmouseup="document.getElementById('colorbox').style.background = 'red'">Make Red</button>
+
+<h2>Hide & Show HTML elements using .style.display</h2>
+<p>One image is an img tag in HTML the second is a CSS background in a div above it.</p>
+<div id="birdincage" style="width: 200px; margin: 0 auto; position: relative;"><img id="bird" src="http://grin3design.com/testimages/1610/bird.jpg" style="width:200px;height:200px;">
+<div id="cage" style="position: absolute; top: 0px; left: 0px; width: 200px; height: 200px; background: url('http://grin3design.com/testimages/1610/cage.png');"></div>
+</div>
+<button type="button" onclick="document.getElementById('cage').style.display = 'none'">Free Me!</button>
+<button type="button" onclick="document.getElementById('cage').style.display = 'block'">Catch Me!</button>
+
+</body>
+</html>

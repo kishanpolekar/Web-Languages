@@ -1,0 +1,104 @@
+body {
+
+    background: rosybrown;
+    margin: 0;
+}
+section {
+
+    background: tomato;
+    margin: 0 auto;
+    max-width: 80%;
+    min-width: 600px;
+    height: 100%;
+    position: relative;
+}
+header {
+
+    background: firebrick;
+    height: 120px;
+    padding-top: 1px;
+    position: relative;
+}
+h1 {
+
+    color: white;
+    text-align: center;
+}
+nav {
+
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    height: 35px;
+    overflow: hidden;
+}
+nav a {
+
+    background: crimson;
+    margin-right: 10px;
+    padding: 9px;
+    display: inline-block;
+    border-radius: 5px 5px 0px 0px;
+}
+aside {
+
+    float: right;
+    width: 20%;
+    height: 800%;
+    padding-right: 20px;
+    padding-left: 2%;
+    text-align: right;
+}
+#main {
+
+    background: white;
+    margin-right: 25%;
+    padding: 1px 0px;
+    min-height: 100vh;
+}
+article {
+
+    margin-left: 50px;
+}
+#main figure {
+
+    float: left;
+    margin: 0px;
+    padding: 0;
+    border: 1px dotted blue;
+}
+#main figure img {
+
+    max-width: 300px;
+}
+#main figcaption {
+
+    text-align: center;
+}
+#goodbye {
+
+    clear: both;
+    padding-top: 50px;
+}
+footer {
+
+    background: indianred;
+    margin: 0;
+    padding: 5px 25px;
+    text-align: center;
+}
+aside figure {
+
+    position: absolute;;
+    right: 15px;
+    top: 0px;
+}
+aside figure img {
+
+    width: 75px;
+    height: 75px;
+}
+aside figcaption {
+
+    display: none;
+}

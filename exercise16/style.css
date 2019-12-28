@@ -1,0 +1,179 @@
+/*MOUSE INTERACTION SELECTORS. Anything can have hover and active.*/
+#box-hover {
+
+    width: 200px;
+    height: 50px;
+    background: red;
+}
+#box-hover:hover {
+
+    width: 400px;
+}
+#box-hover:active {
+
+    background: orange;
+}
+
+/*LINK STYLING LoVe HAte order*/
+
+#linkstates a {
+
+    font-weight: bold;
+    font-size: 18px;
+}
+a.custom {
+
+    text-decoration: none;
+}
+a.custom:visited {
+
+    color: purple;
+}
+a.custom:hover {
+
+    color: cyan;
+}
+a.custom:active {
+
+    color: fuchsia;
+}
+
+/*CHILD SELECTORS*/
+article span {
+
+    font-size: 2em;
+    padding: 15px;
+    border-right: 2px dotted red;
+}
+article span:first-child {
+
+    color: red;
+}
+article span:last-child {
+
+    color: fuchsia;
+    border-width: 0;
+}
+article span:nth-child(odd) {
+
+    font-weight: bold;
+}
+article span:nth-child(2) {
+
+    color: lime;
+}
+article span:nth-last-child(2) {
+
+    color: cyan;
+}
+
+/*FIRST LETTER, LINE, TYPE SELECTORS. Use double colon*/
+
+#lifestory p::first-line {
+
+    color: red;
+}
+#lifestory p:first-child::first-letter {
+
+    color: red;
+    font-size: 2.75em;
+    line-height: .75em;
+    padding-right: 3px;
+    float: left;
+}
+#lifestory {
+
+    max-width: 500px;
+}
+
+/*BEFORE AND AFTER ADDING CONTENT*/
+/*INFO FROM ATTRIBUTE AFTER*/
+
+h2::before {
+
+    content: "• ";
+    color: red;
+    font-weight: bold;
+}
+a::after {
+
+    content: " (" attr(href) ")";
+}
+
+/*BLOCKQUOTE STYLING*/
+
+blockquote {
+
+    width: 200px;
+    color: lightblue;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.5em;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+
+    content: open-quote" ";
+}
+blockquote:after {
+
+    content: " "close-quote;
+}
+blockquote:before, blockquote:after {
+
+    font-size: 1.5em;
+    color: blue;
+    line-height: 1em;
+}
+
+/*SECRET SELECTION*/
+
+#secret p::selection {
+
+    color: transparent;
+}
+#secret p span::selection {
+
+    color: red;
+    background: yellow;
+}
+#secret p:hover:after {
+
+    content: "(Select this paragraph for a secret message!)";
+    font: bold italic 75% serif;
+    color: chocolate;
+    margin-left: 25px;
+}
+
+/*Hexadecimal names (css code) for utf-8 characters dignbats. Use backslash before the code.*/
+
+h3:after {
+
+    content: " \261c";
+    color: red;
+    font-size: 200%;
+    line-height: 0;
+    vertical-align: -.25em;
+}
+[id*=y]:after {
+
+    content: "\26c4 ?";
+    font-size: 100px;
+    color: blue;
+}
+
+/*IMAGE AFTER ~= CONTAINS ^= BEGINS WITH $= ENDS WITH *= EVERY*/
+
+[title~="mule"]:after {
+
+    content: url("http://www.grin3design.com/testimages/mobun-sm.png");
+    font-size: 24px;
+    background-size: contain;
+}
+/*WITHOUT THE AFTER OR BEFORE CONTENT JUST REPLACES*/
+
+#replace {
+
+    background: skyblue;
+    content: url("http://www.grin3design.com/testimages/ishcrim2.gif");
+}
